@@ -13,7 +13,7 @@ const getData = async (url, params) => {
     console.log("selected movie: " + selectedMovie.value);
     const movieData = await getData("https://api.themoviedb.org/3/search/movie", {
       params: {
-        api_key: "8d992bf093d92b23f2529662f9291664",
+        api_key: "your key",
         query: selectedMovie.value,
       }
     });
@@ -29,7 +29,7 @@ const getData = async (url, params) => {
       console.log("movie: " + movie)
       const extraData = await getData(`https://api.themoviedb.org/3/movie/${movie.id}`, {
         params: {
-          api_key: "8d992bf093d92b23f2529662f9291664",
+          api_key: "your key",
           append_to_response: "videos",
         }
       });
